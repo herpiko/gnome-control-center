@@ -1,3 +1,10 @@
+gnome-control-center (1:3.12.0-1blankon2) tambora; urgency=low
+
+  * debian/patch: 
+    - 101-using-info-blankon-branding.patch 
+
+ -- Darian Rizaludin <driantrainman@gmail.com>  Fri, 04 Apr 2014 21:39:08 +0700
+
 gnome-control-center (1:3.12.0-1blankon1) tambora; urgency=low
 
   * New upstream release
