@@ -1,7 +1,7 @@
 Source: gnome-control-center
 Section: gnome
 Priority: optional
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Maintainer: BlankOn Developers <BlankOn-Dev@googlegroups.com>
 Uploaders: @GNOME_TEAM@
 Standards-Version: 3.9.5
 Build-Depends: autotools-dev,
