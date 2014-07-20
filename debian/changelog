@@ -1,3 +1,10 @@
+gnome-control-center (1:3.12.1-4blankon2) tambora; urgency=medium
+
+  * re-patch:
+    - 101-using-info-blankon-branding.patch
+
+ -- mijortsa <azis.astrojim@surabaya.di.blankon.in>  Mon, 21 Jul 2014 03:26:56 +0700
+
 gnome-control-center (1:3.12.1-4blankon1) tambora; urgency=medium
 
   * debian/patches:
