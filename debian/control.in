@@ -57,7 +57,7 @@ Build-Depends: autotools-dev,
                network-manager-dev (>= 0.9.8),
                libnm-util-dev (>= 0.9.8),
                libnm-glib-dev (>= 0.9.8),
-               libmm-glib-dev [linux-any],
+               libmm-glib-dev,
                shared-mime-info,
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-control-center/
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-control-center/
@@ -92,6 +92,7 @@ Recommends: cups-pk-helper,
             system-config-printer (>= 1.4),
             network-manager-gnome (>= 0.9.8),
             libnss-myhostname,
+            cracklib-runtime,
             realmd
 Breaks: gnome-power-manager (<< 3.0),
         gnome-session (<< 3.0),
