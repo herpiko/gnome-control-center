@@ -1,3 +1,9 @@
+gnome-control-center (1:3.14.2-3blankon2) tambora; urgency=medium
+
+  * 99_blankon-logo.patch
+
+ -- Mijortsa <mijortsa@localhost>  Sun, 05 Apr 2015 01:38:57 +0700
+
 gnome-control-center (1:3.14.2-3blankon1) tambora; urgency=medium
 
   * Upstream release
