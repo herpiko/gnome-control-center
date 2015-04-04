@@ -1,4 +1,6 @@
 01_menu_category.patch
 06_handle_passwd_with_ldap.patch
 07_polkit_wheel_sudo_group.patch
-101-using-info-blankon-branding.patch
+30_stack_overflow.patch
+31_printers_border.patch
+99_blankon-logo.patch
