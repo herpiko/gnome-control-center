@@ -1,93 +1,51 @@
 diff -Naur gnome-control-center-3.14.2.orig/panels/info/GnomeLogoVerticalMedium.svg gnome-control-center-3.14.2/panels/info/GnomeLogoVerticalMedium.svg
 --- gnome-control-center-3.14.2.orig/panels/info/GnomeLogoVerticalMedium.svg	2012-04-07 20:29:31.000000000 +0700
-+++ gnome-control-center-3.14.2/panels/info/GnomeLogoVerticalMedium.svg	2015-04-04 22:54:13.640520000 +0700
-@@ -9,126 +9,60 @@
-    xmlns="http://www.w3.org/2000/svg"
++++ gnome-control-center-3.14.2/panels/info/GnomeLogoVerticalMedium.svg	2015-04-07 21:29:55.222969000 +0700
+@@ -10,10 +10,10 @@
     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
--   version="1.0"
+    version="1.0"
 -   width="97.966095"
--   height="138.95122"
--   id="svg1903"
++   width="180.97"
+    height="138.95122"
+    id="svg1903"
 -   inkscape:version="0.48.1 r9760"
--   sodipodi:docname="GnomeLogoVerticalMedium.svg">
-+   width="230"
-+   height="128"
-+   id="svg2"
-+   version="1.1"
 +   inkscape:version="0.48.5 r10040"
-+   sodipodi:docname="blankon-logo.svg">
-+  <defs
-+     id="defs4" />
-+  <sodipodi:namedview
-+     id="base"
-+     pagecolor="#ffffff"
-+     bordercolor="#666666"
-+     borderopacity="1.0"
-+     inkscape:pageopacity="0.0"
-+     inkscape:pageshadow="2"
-+     inkscape:zoom="3.5933333"
-+     inkscape:cx="115"
-+     inkscape:cy="75"
-+     inkscape:document-units="px"
-+     inkscape:current-layer="layer1"
-+     showgrid="false"
-+     inkscape:window-width="1366"
-+     inkscape:window-height="718"
-+     inkscape:window-x="0"
-+     inkscape:window-y="24"
-+     inkscape:window-maximized="1" />
+    sodipodi:docname="GnomeLogoVerticalMedium.svg">
    <metadata
--     id="metadata24">
-+     id="metadata7">
-     <rdf:RDF>
-       <cc:Work
-          rdf:about="">
-         <dc:format>image/svg+xml</dc:format>
-         <dc:type
-            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-+        <dc:title />
-       </cc:Work>
-     </rdf:RDF>
-   </metadata>
--  <sodipodi:namedview
--     pagecolor="#ffffff"
--     bordercolor="#666666"
--     borderopacity="1"
--     objecttolerance="10"
--     gridtolerance="10"
--     guidetolerance="10"
--     inkscape:pageopacity="0"
--     inkscape:pageshadow="2"
+      id="metadata24">
+@@ -35,16 +35,16 @@
+      guidetolerance="10"
+      inkscape:pageopacity="0"
+      inkscape:pageshadow="2"
 -     inkscape:window-width="818"
 -     inkscape:window-height="738"
--     id="namedview22"
--     showgrid="false"
--     inkscape:zoom="2.0645911"
++     inkscape:window-width="1366"
++     inkscape:window-height="718"
+      id="namedview22"
+      showgrid="false"
+      inkscape:zoom="2.0645911"
 -     inkscape:cx="6.1022513"
--     inkscape:cy="68.392751"
++     inkscape:cx="-28.134891"
+      inkscape:cy="68.392751"
 -     inkscape:window-x="460"
 -     inkscape:window-y="26"
 -     inkscape:window-maximized="0"
--     inkscape:current-layer="svg1903"
--     fit-margin-top="0"
--     fit-margin-left="0"
--     fit-margin-right="0"
--     fit-margin-bottom="0" />
--  <defs
--     id="defs1905">
--    <inkscape:perspective
--       sodipodi:type="inkscape:persp3d"
--       inkscape:vp_x="0 : 244.11613 : 1"
--       inkscape:vp_y="0 : 1000 : 0"
--       inkscape:vp_z="401.74014 : 244.11613 : 1"
--       inkscape:persp3d-origin="200.87007 : 162.74409 : 1"
--       id="perspective26" />
--  </defs>
++     inkscape:window-x="0"
++     inkscape:window-y="24"
++     inkscape:window-maximized="1"
+      inkscape:current-layer="svg1903"
+      fit-margin-top="0"
+      fit-margin-left="0"
+@@ -61,74 +61,34 @@
+        id="perspective26" />
+   </defs>
    <g
 -     transform="matrix(0.30686102,0,0,0.30686102,-57.94673,-76.524295)"
 -     id="layer1">
--    <g
++     id="g3787"
++     transform="matrix(1.4012379,0,0,1.4012379,-67.138751,-21.876247)">
+     <g
 -       transform="translate(925.8326,120.8762)"
 -       id="g3963">
 -      <g
@@ -153,22 +111,31 @@ diff -Naur gnome-control-center-3.14.2.orig/panels/info/GnomeLogoVerticalMedium.
 -           id="path3791"
 -           inkscape:connector-curvature="0" />
 -      </g>
--    </g>
-+     inkscape:label="Layer 1"
-+     inkscape:groupmode="layer"
-+     id="layer1"
-+     transform="translate(0,-924.36218)">
-+    <text
-+       xml:space="preserve"
-+       style="font-size:98.15370941px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Comfortaa;-inkscape-font-specification:Comfortaa"
-+       x="26.599356"
-+       y="1026.7035"
-+       id="text2985"
-+       sodipodi:linespacing="125%"><tspan
-+         sodipodi:role="line"
-+         id="tspan2987"
-+         x="26.599356"
-+         y="1026.7035"
-+         style="font-weight:bold;fill:#000000;-inkscape-font-specification:Comfortaa Bold">OIX</tspan></text>
++       transform="translate(0,10.741135)"
++       id="text2997"
++       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Comfortaa;-inkscape-font-specification:Comfortaa Bold">
++      <path
++         inkscape:connector-curvature="0"
++         id="path3785"
++         d="m 84.169819,40.359474 c -2.583358,4.4e-5 -4.947939,0.44796 -7.09375,1.34375 -2.125018,0.895875 -4.093766,2.25004 -5.90625,4.0625 -1.812513,1.812536 -3.166678,3.781284 -4.0625,5.90625 -0.87501,2.12503 -1.312509,4.479194 -1.3125,7.0625 -9e-6,5.083353 1.791656,9.416682 5.375,13 3.583315,3.583342 7.916644,5.375007 13,5.375 5.083301,7e-6 9.41663,-1.791658 13,-5.375 3.583291,-3.583318 5.374951,-7.916647 5.375001,-13 -5e-5,-5.06247 -1.79171,-9.385382 -5.375001,-12.96875 -3.604204,-3.604125 -7.937533,-5.406206 -13,-5.40625 m 25.000001,18.375 c -5e-5,6.895852 -2.44797,12.791679 -7.34375,17.6875 -4.875041,4.875003 -10.760452,7.3125 -17.656251,7.3125 -6.916687,0 -12.812515,-2.437497 -17.6875,-7.3125 -4.875005,-4.874988 -7.312503,-10.770815 -7.3125,-17.6875 -3e-6,-6.895801 2.437495,-12.781212 7.3125,-17.65625 4.895819,-4.895786 10.791646,-7.3437 17.6875,-7.34375 6.874966,5e-5 12.760376,2.447964 17.656251,7.34375 2.45828,2.458374 4.29162,5.145871 5.5,8.0625 1.22911,2.916699 1.8437,6.114612 1.84375,9.59375" />
++    </g>
++    <g
++       transform="translate(199.50128,5.8975598)"
++       id="text3769"
++       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Comfortaa;-inkscape-font-specification:Comfortaa Bold">
++      <path
++         inkscape:connector-curvature="0"
++         id="path3778"
++         d="m -78.902977,85.265549 c -1.1e-5,0.916669 -0.322928,1.697918 -0.96875,2.34375 -0.645843,0.645833 -1.427092,0.96875 -2.34375,0.96875 -0.916674,0 -1.697923,-0.322917 -2.34375,-0.96875 -0.645838,-0.645832 -0.968755,-1.427081 -0.96875,-2.34375 l 0,-43.375 c -5e-6,-0.916619 0.322912,-1.697869 0.96875,-2.34375 0.645827,-0.645784 1.427076,-0.9687 2.34375,-0.96875 0.916658,5e-5 1.697907,0.322966 2.34375,0.96875 0.645822,0.645881 0.968739,1.427131 0.96875,2.34375 l 0,43.375" />
++    </g>
++    <g
++       transform="translate(175.33739,12.678566)"
++       id="text3773"
++       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Comfortaa;-inkscape-font-specification:Comfortaa Bold">
++      <path
++         inkscape:connector-curvature="0"
++         id="path3782"
++         d="m -44.27935,80.828293 c -0.645841,0.645834 -1.42709,0.96875 -2.34375,0.96875 -0.916672,0 -1.697921,-0.3125 -2.34375,-0.9375 -0.645836,-0.645832 -0.968753,-1.427081 -0.96875,-2.34375 -3e-6,-0.791663 0.23958,-1.489579 0.71875,-2.09375 l 15.28125,-19.625 -15.375,-19.75 c -0.395836,-0.562455 -0.593753,-1.208288 -0.59375,-1.9375 -3e-6,-0.916619 0.322914,-1.697868 0.96875,-2.34375 0.645829,-0.645784 1.427078,-0.9687 2.34375,-0.96875 0.999993,5e-5 1.781242,0.322966 2.34375,0.96875 l 14.53125,18.625 14.53125,-18.625 c 0.583295,-0.645784 1.364545,-0.9687 2.34375,-0.96875 0.916626,5e-5 1.687459,0.322966 2.3125,0.96875 0.6457906,0.645882 0.968707,1.427131 0.9687497,2.34375 -4.27e-5,0.729212 -0.1979592,1.375045 -0.5937497,1.9375 l -15.34375,19.75 15.28125,19.625 c 0.4582905,0.604171 0.6874569,1.302087 0.6874997,2.09375 -4.28e-5,0.916669 -0.3229591,1.697918 -0.9687497,2.34375 -0.625041,0.625 -1.395874,0.9375 -2.3125,0.9375 -1.104205,0 -1.968788,-0.395833 -2.59375,-1.1875 l -14.3125,-18.40625 -14.5625,18.625" />
+     </g>
    </g>
  </svg>
