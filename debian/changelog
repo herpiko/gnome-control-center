@@ -1,3 +1,9 @@
+gnome-control-center (1:3.14.2-3blankon4) tambora; urgency=medium
+
+  * rebuild with libpolicykit-agent
+
+ -- Mijortsa <azis.astrojim@surabaya.di.blankon.in>  Tue, 14 Apr 2015 19:04:07 +0700
+
 gnome-control-center (1:3.14.2-3blankon3) tambora; urgency=medium
 
   * rebuild logo
