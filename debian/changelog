@@ -1,3 +1,9 @@
+gnome-control-center (1:3.14.2-3blankon5) tambora; urgency=medium
+
+  * Added patch git_remove_checking_networkmanager_version.patch 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Tue, 14 Apr 2015 23:12:08 +0700
+
 gnome-control-center (1:3.14.2-3blankon4) tambora; urgency=medium
 
   * rebuild with libpolicykit-agent
