@@ -20,7 +20,7 @@ Index: gnome-control-center/panels/info/info.ui
                                  <property name="visible">True</property>
                                  <property name="can_focus">False</property>
 -                                <property name="resource">/org/gnome/control-center/info/GnomeLogoVerticalMedium.svg</property>
-+                                <property name="pixbuf">BlankOnLogo.png</property>
++                                <property name="pixbuf">BlankonLogo.png</property>
                                </object>
                                <packing>
                                  <property name="expand">False</property>
@@ -32,6 +32,6 @@ Index: gnome-control-center/panels/info/info.gresource.xml
    <gresource prefix="/org/gnome/control-center/info">
      <file preprocess="xml-stripblanks">info.ui</file>
      <file>GnomeLogoVerticalMedium.svg</file>
-+    <file>BlankOnLogo.png</file>
++    <file>BlankonLogo.png</file>
    </gresource>
  </gresources>

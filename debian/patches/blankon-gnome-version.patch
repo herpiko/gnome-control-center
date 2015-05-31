@@ -47,11 +47,11 @@ Index: gnome-control-center-3.12.1/panels/info/Makefile.am
 +
  noinst_LTLIBRARIES = libinfo.la
  
-+BlankOnLogo.png: logo-generator
-+	./logo-generator --logo BlankOnLogoBlank.png --text "BlankOn X Tambora" --output BlankOnLogo.png
++BlankonLogo.png: logo-generator
++	./logo-generator --logo BlankonLogoBlank.png --text "BlankOn X Tambora" --output BlankonLogo.png
 +
  BUILT_SOURCES =			\
-+	BlankOnLogo.png		\
++	BlankonLogo.png		\
  	cc-info-resources.c	\
  	cc-info-resources.h
  

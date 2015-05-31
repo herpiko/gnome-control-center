@@ -17,8 +17,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 
 DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
 pre-build::
-	touch panels/info/BlankOnLogo.png
-	cp debian/BlankOnLogoBlank.png panels/info
+	touch panels/info/BlankonLogo.png
+	cp debian/BlankonLogoBlank.png panels/info
 
 # Install a wrapper to run unity-control-center under Unity
 #binary-post-install/gnome-control-center::
