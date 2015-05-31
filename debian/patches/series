@@ -10,5 +10,5 @@ revert_git_new_bluetooth_panel.patch
 revert_git_drop_library.patch
 #ubuntu_external_panels.patch
 blankon-gnome-version.patch
-revert_new_bluetooth.patch
-revert-bluetooth-BlueZ5-interface.patch
+#revert_new_bluetooth.patch
+#revert-bluetooth-BlueZ5-interface.patch
