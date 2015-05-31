@@ -1,3 +1,11 @@
+gnome-control-center (1:3.16.1-0blankon2) tambora; urgency=medium
+
+  * Disable patches:
+    - 64_restore_terminal_keyboard_shortcut.patch
+    - 99_add_lock-on-suspend.patch
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 31 May 2015 22:04:38 +0700
+
 gnome-control-center (1:3.16.1-0blankon1) tambora; urgency=medium
 
   * New upstream release
