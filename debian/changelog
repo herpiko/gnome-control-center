@@ -1,3 +1,9 @@
+gnome-control-center (1:3.16.1-0blankon4) tambora; urgency=medium
+
+  * Rebuild 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 07 Jun 2015 00:25:00 +0700
+
 gnome-control-center (1:3.16.1-0blankon3) tambora; urgency=medium
 
   * Added Blankon Logo (OI) 
