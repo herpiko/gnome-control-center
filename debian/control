@@ -65,6 +65,7 @@ Build-Depends: autotools-dev,
                libmm-glib-dev,
                shared-mime-info,
                fonts-aurulent-sans,
+               valac (>= 0.20.0),
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-control-center/
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-control-center/
 
