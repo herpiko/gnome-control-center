@@ -12,22 +12,11 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 include /usr/share/dpkg/buildflags.mk
 
-DEB_CONFIGURE_EXTRA_FLAGS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-                             --disable-update-mimedb
+DEB_CONFIGURE_EXTRA_FLAGS += --disable-update-mimedb
 
 DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
 pre-build::
 	touch panels/info/BlankonLogo.png
 	cp debian/BlankonLogoBlank.png panels/info
-
-# Install a wrapper to run unity-control-center under Unity
-#binary-post-install/gnome-control-center::
-#	mv debian/gnome-control-center/usr/bin/gnome-control-center debian/gnome-control-center/usr/bin/gnome-control-center.real
-#	cp debian/gnome-control-center.sh debian/gnome-control-center/usr/bin/gnome-control-center
-
-binary-post-install/gnome-control-center-data::
-	rm -rf debian/capplets-data/usr/share/applications/mimeinfo.cache
-	rm -rf debian/capplets-data/usr/share/pkgconfig
-	dh_installmime -p$(cdbs_curpkg)
 
 common-binary-post-install-arch:: list-missing
