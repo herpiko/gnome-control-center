@@ -59,7 +59,7 @@ Build-Depends: autotools-dev,
                libnm-util-dev (>= 0.9.8),
                libnm-glib-dev (>= 0.9.8),
                libmm-glib-dev,
-               shared-mime-info
+               shared-mime-info,
                fonts-aurulent-sans,
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-control-center/
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-control-center/
