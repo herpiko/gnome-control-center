@@ -1,14 +1,39 @@
-gnome-control-center (1:3.16.2-2blankon2) tambora; urgency=medium
+gnome-control-center (1:3.18.0-0blankon1) tambora; urgency=medium
 
-  * Rebuild  
+  * New upstream release
 
- -- Mahyuddin <yudi.al@gmail.com>  Tue, 16 Jun 2015 08:19:59 +0700
+ -- mhy <dotovr@mhy>  Thu, 01 Oct 2015 00:04:23 +0700
 
-gnome-control-center (1:3.16.2-2blankon1) tambora; urgency=medium
+gnome-control-center (1:3.17.92-1) experimental; urgency=medium
 
-  * New upstream release 
+  [ Josselin Mouette ]
+  * Remove Debian menu entry.
 
- -- Mahyuddin <yudi.al@gmail.com>  Mon, 15 Jun 2015 22:27:45 +0700
+  [ Andreas Henriksson ]
+  * New upstream release candidate.
+  * Update build-dependencies according to configure.ac changes:
+    - bump gnome-bluetooth >= 3.17.90
+    - bump gnome-desktop >= 3.17.4
+  * Update debian/patches/debian-uses-ssh-service.patch
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Sep 2015 17:22:36 +0200
+
+gnome-control-center (1:3.16.3-1) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * Add debian/patches/debian-uses-ssh-service.patch
+    - look for ssh.service (rathen than sshd.service) to make
+      Remote Login show up under sharing panel.
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Drop clean-la.mk include from debian/rules, the package no longer ships
+    any libtool .la files.
+  * Drop obsolete Breaks/Replaces from pre-wheezy and the no longer used
+    Conflicts/Replaces/Provides: capplet-data.
+  * Bump debhelper compatibility level to 9.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 22 Jul 2015 21:00:37 +0200
 
 gnome-control-center (1:3.16.2-2) unstable; urgency=medium
 

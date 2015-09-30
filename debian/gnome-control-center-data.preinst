@@ -2,7 +2,7 @@
 
 pkg=gnome-control-center-data
 
-if [ upgrade != "$1" ] && dpkg --compare-versions "$2" lt-nl "1:3.16.2"; then
+if [ upgrade != "$1" ] && dpkg --compare-versions "$2" lt-nl "1:3.18.0"; then
     dpkg-divert --divert /var/lib/polkit-1/localauthority/10-vendor.d/gnome-control-center.pkla.divert --package "$pkg" --rename --add /var/lib/polkit-1/localauthority/10-vendor.d/gnome-control-center.pkla
 fi
 
