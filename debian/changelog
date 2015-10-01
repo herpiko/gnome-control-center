@@ -1,6 +1,9 @@
 gnome-control-center (1:3.18.0-0blankon1) tambora; urgency=medium
 
   * New upstream release
+  * Added Build-Depends is required by build BlankOn Logo
+    - fonts-aurulent-sans
+    - valac (>= 0.20.0)
 
  -- mhy <dotovr@mhy>  Thu, 01 Oct 2015 00:04:23 +0700
 

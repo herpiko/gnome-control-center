@@ -1,7 +1,8 @@
 Source: gnome-control-center
 Section: gnome
 Priority: optional
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@
 Standards-Version: 3.9.6
 Build-Depends: autotools-dev,
@@ -59,6 +60,8 @@ Build-Depends: autotools-dev,
                libnm-glib-dev (>= 0.9.8) [linux-any],
                libmm-glib-dev [linux-any],
                shared-mime-info,
+               fonts-aurulent-sans,
+               valac (>= 0.20.0),
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-control-center/
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-control-center/
 
