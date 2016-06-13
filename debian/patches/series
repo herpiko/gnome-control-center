@@ -4,3 +4,4 @@ debian-uses-ssh-service.patch
 07_polkit_wheel_sudo_group.patch
 56_use_blankon_info_branding.patch
 blankon-gnome-version.patch
+101-blankon-default-wallpapers.patch
