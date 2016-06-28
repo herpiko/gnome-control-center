@@ -1,3 +1,9 @@
+gnome-control-center (1:3.20.1-2blankon4) tambora; urgency=medium
+
+  * Replace new logo OIX 
+
+ -- dotovr <dotovr@preko>  Wed, 29 Jun 2016 02:40:02 +0700
+
 gnome-control-center (1:3.20.1-2blankon3) tambora; urgency=medium
 
   * Add patch
