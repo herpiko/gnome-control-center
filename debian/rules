@@ -16,6 +16,6 @@ DEB_CONFIGURE_EXTRA_FLAGS += --disable-update-mimedb
 DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
 pre-build::
 	touch panels/info/BlankonLogo.png
-	cp debian/BlankonLogoBlank.png panels/info
+	cp debian/BlankonLogo.png panels/info
 
 common-binary-post-install-arch:: list-missing
