@@ -11,7 +11,7 @@ Build-Depends: cdbs, debhelper (>= 10),
                desktop-file-utils,
                gnome-common,
                gnome-pkg-tools (>= 0.10),
-               gnome-settings-daemon-dev (>= 3.23.90),
+               gnome-settings-daemon-dev (>= 3.19.1),
                gsettings-desktop-schemas-dev (>= 3.21.4),
                gtk-doc-tools,
                intltool (>= 0.37.1),
@@ -35,6 +35,7 @@ Build-Depends: cdbs, debhelper (>= 10),
                libkrb5-dev,
                libnm-dev (>= 1.2.0),
                libnma-dev (>= 1.2.0),
+               libmm-glib-dev,
                libpolkit-gobject-1-dev (>= 0.103),
                libpulse-dev,
                libpwquality-dev,
@@ -47,13 +48,10 @@ Build-Depends: cdbs, debhelper (>= 10),
                libxklavier-dev (>= 5.1),
                libxml2-dev,
                locales,
-               network-manager-dev (>= 1.2.0),
-               libnm-util-dev (>= 1.2.0),
-               libnm-glib-dev (>= 1.2.0),
-               libmm-glib-dev,
                shared-mime-info,
                tzdata
-Vcs-Bzr: http://code.launchpad.net/~ubuntu-desktop/gnome-control-center/ubuntu
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-control-center/
+Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-control-center/
 
 Package: gnome-control-center
 Architecture: any
@@ -66,29 +64,25 @@ Depends: ${misc:Depends},
          gnome-control-center-data (<< ${gnome:NextVersion}),
          gnome-control-center-data (>= ${source:Version}),
          gnome-desktop3-data,
-         gnome-settings-daemon (>= 3.23.90),
+         gnome-settings-daemon (>= 3.19.1),
          gsettings-desktop-schemas (>= 3.21.4),
-         network-manager-gnome (>= 0.9.8),
-         system-config-printer-common (>= 1.4),
-         ttf-ubuntu-font-family
 Recommends: cups-pk-helper,
             gnome-online-accounts,
-            ubuntu-docs,
+            gnome-user-guide,
             gnome-user-share,
             gkbd-capplet,
-            ibus,
             iso-codes,
             libcanberra-pulse,
             mousetweaks,
             policykit-1,
+            rygel | rygel-tracker,
+            system-config-printer-common (>= 1.4),
+            network-manager-gnome (>= 0.9.8),
             libnss-myhostname,
             cracklib-runtime,
             pulseaudio-module-bluetooth,
-            ubuntu-system-service,
-            unity-control-center-faces
+            realmd
 Suggests: gstreamer1.0-pulseaudio,
-          realmd,
-          rygel | rygel-tracker,
           libcanberra-gtk-module,
           libcanberra-gtk3-module,
           x11-xserver-utils
@@ -103,6 +97,7 @@ Description: utilities to configure the GNOME desktop
 
 Package: gnome-control-center-dev
 Architecture: all
+Multi-Arch: foreign
 Section: devel
 Depends: ${misc:Depends}
 Description: utilities to configure the GNOME desktop
@@ -110,8 +105,8 @@ Description: utilities to configure the GNOME desktop
 
 Package: gnome-control-center-data
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
-Recommends: gnome-control-center (>= ${source:Version})
 Breaks: gnome-control-center (<< 1:3.7.92-2~)
 Replaces: gnome-control-center (<< 1:3.7.92-2~)
 Description: configuration applets for GNOME - data files
