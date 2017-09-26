@@ -1,8 +1,8 @@
-Index: gnome-control-center-3.22.2/panels/info/cc-info-panel.c
+Index: gnome-control-center-3.16.2/panels/info/cc-info-panel.c
 ===================================================================
---- gnome-control-center-3.22.2.orig/panels/info/cc-info-panel.c
-+++ gnome-control-center-3.22.2/panels/info/cc-info-panel.c
-@@ -1512,6 +1512,8 @@ info_panel_setup_overview (CcInfoPanel
+--- gnome-control-center-3.16.2.orig/panels/info/cc-info-panel.c
++++ gnome-control-center-3.16.2/panels/info/cc-info-panel.c
+@@ -1482,6 +1482,8 @@ info_panel_setup_overview (CcInfoPanel
        g_free (text);
      }
  
@@ -11,10 +11,23 @@ Index: gnome-control-center-3.22.2/panels/info/cc-info-panel.c
    glibtop_get_mem (&mem);
    text = g_format_size_full (mem.total, G_FORMAT_SIZE_IEC_UNITS);
    widget = WID ("memory_label");
-Index: gnome-control-center-3.22.2/panels/info/info.gresource.xml
+Index: gnome-control-center-3.16.2/panels/info/info.ui
 ===================================================================
---- gnome-control-center-3.22.2.orig/panels/info/info.gresource.xml
-+++ gnome-control-center-3.22.2/panels/info/info.gresource.xml
+--- gnome-control-center-3.16.2.orig/panels/info/info.ui
++++ gnome-control-center-3.16.2/panels/info/info.ui
+@@ -205,7 +205,7 @@
+                               <object class="GtkImage" id="system_image">
+                                 <property name="visible">True</property>
+                                 <property name="can_focus">False</property>
+-                                <property name="resource">/org/gnome/control-center/info/GnomeLogoVerticalMedium.svg</property>
++                                <property name="pixbuf">BlankonLogo.png</property>
+                               </object>
+                               <packing>
+                                 <property name="expand">False</property>
+Index: gnome-control-center-3.16.2/panels/info/info.gresource.xml
+===================================================================
+--- gnome-control-center-3.16.2.orig/panels/info/info.gresource.xml
++++ gnome-control-center-3.16.2/panels/info/info.gresource.xml
 @@ -3,5 +3,6 @@
    <gresource prefix="/org/gnome/control-center/info">
      <file preprocess="xml-stripblanks">info.ui</file>
