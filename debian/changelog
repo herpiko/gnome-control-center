@@ -1,3 +1,9 @@
+gnome-control-center (1:3.24.3-1blankon5) uluwatu; urgency=medium
+
+  * Change rule file
+
+ -- AnTo SamalonA <ansamsoftdev@gmail.com>  Sat, 30 Sep 2017 21:38:58 +0800
+
 gnome-control-center (1:3.24.3-1blankon4) uluwatu; urgency=medium
 
   * Drop old patches and add new one

@@ -1,21 +1,26 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/autoreconf.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/utils.mk
-include /usr/share/cdbs/1/class/gnome.mk
-include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
 include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
-include /usr/share/dpkg/buildflags.mk
+export DEB_CPPFLAGS_MAINT_APPEND = -DSSHD_SERVICE=\"ssh.service\"
 
-DEB_CONFIGURE_EXTRA_FLAGS += --disable-update-mimedb
+%:
+	dh $@ --with gnome
 
-DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
-pre-build::
+override_dh_autoreconf:
+	dh_autoreconf --as-needed
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--libexecdir=\$${prefix}/lib/gnome-control-center \
+		--with-gnome-session-libexecdir=\$${prefix}/lib/gnome-session \
+		--disable-update-mimedb
+
+override_dh_auto_build:
 	touch panels/info/BlankonLogo.png
 	cp debian/BlankonLogoBlank.png panels/info
+	dh_auto_build
 
-common-binary-post-install-arch:: list-missing
+override_dh_install:
+	dh_install --list-missing
