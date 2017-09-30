@@ -3,3 +3,4 @@
 07_polkit_wheel_sudo_group.patch
 56_use_blankon_info_branding.patch
 101-blankon-default-wallpapers.patch
+111_blankon_gnome_version.patch

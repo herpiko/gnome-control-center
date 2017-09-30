@@ -1,8 +1,12 @@
-diff -Naur -p1 gnome-control-center-3.20.1.orig/panels/background/bg-wallpapers-source.c gnome-control-center-3.20.1/panels/background/bg-wallpapers-source.c
---- gnome-control-center-3.20.1.orig/panels/background/bg-wallpapers-source.c	2015-03-23 17:55:50.000000000 +0700
-+++ gnome-control-center-3.20.1/panels/background/bg-wallpapers-source.c	2016-06-13 20:04:05.480067773 +0700
-@@ -116,3 +116,3 @@ load_default_bg (BgWallpapersSource *sel
+diff -Naur gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c gnome-control-center_3.24.3/panels/background/bg-wallpapers-source.c
+--- gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c	2017-09-30 17:42:45.985272689 +0800
++++ gnome-control-center_3.24.3/panels/background/bg-wallpapers-source.c	2017-09-30 17:37:34.625712664 +0800
+@@ -114,7 +114,7 @@
+   for (i = 0; system_data_dirs[i]; i++) {
+     filename = g_build_filename (system_data_dirs[i],
  				 "gnome-background-properties",
--				 "adwaita.xml",
-+				 "blankon-wallpapers.xml",
+-				 "blankon-wallpapers.xml",
++				 "adwaita.xml",
  				 NULL);
+     if (cc_background_xml_load_xml (self->priv->xml, filename)) {
+       g_free (filename);

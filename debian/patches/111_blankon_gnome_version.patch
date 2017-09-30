@@ -1,8 +1,7 @@
-Index: gnome-control-center_3.24.3.orig/configure.ac
-===================================================================
---- gnome-control-center_3.24.3.orig.orig/configure.ac
-+++ gnome-control-center_3.24.3.orig/configure.ac
-@@ -174,7 +174,7 @@ PKG_CHECK_MODULES(REMOTE_LOGIN_HELPER, g
+diff -Naur gnome-control-center_3.24.3.orig/configure.ac gnome-control-center_3.24.3/configure.ac
+--- gnome-control-center_3.24.3.orig/configure.ac	2017-09-30 19:55:31.605172025 +0800
++++ gnome-control-center_3.24.3/configure.ac	2017-09-30 17:37:34.605713240 +0800
+@@ -174,7 +174,7 @@
  
  PKG_CHECK_MODULES(GVC, gobject-2.0 libpulse libpulse-mainloop-glib)
  AM_CONDITIONAL(HAVE_INTROSPECTION, false)
@@ -11,11 +10,10 @@ Index: gnome-control-center_3.24.3.orig/configure.ac
  GDESKTOP_PREFIX=`$PKG_CONFIG --variable prefix gsettings-desktop-schemas`
  AC_SUBST(GDESKTOP_PREFIX)
  
-Index: gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c
-===================================================================
---- gnome-control-center_3.24.3.orig.orig/panels/background/bg-wallpapers-source.c
-+++ gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c
-@@ -114,7 +114,7 @@ load_default_bg (BgWallpapersSource *sel
+diff -Naur gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c gnome-control-center_3.24.3/panels/background/bg-wallpapers-source.c
+--- gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c	2017-09-30 17:42:45.985272689 +0800
++++ gnome-control-center_3.24.3/panels/background/bg-wallpapers-source.c	2017-09-30 17:37:34.625712664 +0800
+@@ -114,7 +114,7 @@
    for (i = 0; system_data_dirs[i]; i++) {
      filename = g_build_filename (system_data_dirs[i],
  				 "gnome-background-properties",
@@ -24,35 +22,9 @@ Index: gnome-control-center_3.24.3.orig/panels/background/bg-wallpapers-source.c
  				 NULL);
      if (cc_background_xml_load_xml (self->priv->xml, filename)) {
        g_free (filename);
-Index: gnome-control-center_3.24.3.orig/panels/info/info.gresource.xml
-===================================================================
---- gnome-control-center_3.24.3.orig.orig/panels/info/info.gresource.xml
-+++ gnome-control-center_3.24.3.orig/panels/info/info.gresource.xml
-@@ -2,6 +2,6 @@
- <gresources>
-   <gresource prefix="/org/gnome/control-center/info">
-     <file preprocess="xml-stripblanks">info.ui</file>
--    <file>BlankonLogo.png</file>
-+    <file>GnomeLogoVerticalMedium.svg</file>
-   </gresource>
- </gresources>
-Index: gnome-control-center_3.24.3.orig/panels/info/info.ui
-===================================================================
---- gnome-control-center_3.24.3.orig.orig/panels/info/info.ui
-+++ gnome-control-center_3.24.3.orig/panels/info/info.ui
-@@ -205,7 +205,7 @@
-                               <object class="GtkImage" id="system_image">
-                                 <property name="visible">True</property>
-                                 <property name="can_focus">False</property>
--                                <property name="pixbuf">BlankonLogo.png</property>
-+                                <property name="resource">/org/gnome/control-center/info/GnomeLogoVerticalMedium.svg</property>
-                               </object>
-                               <packing>
-                                 <property name="expand">False</property>
-Index: gnome-control-center_3.24.3.orig/panels/info/logo-generator.vala
-===================================================================
---- gnome-control-center_3.24.3.orig.orig/panels/info/logo-generator.vala
-+++ /dev/null
+diff -Naur gnome-control-center_3.24.3.orig/panels/info/logo-generator.vala gnome-control-center_3.24.3/panels/info/logo-generator.vala
+--- gnome-control-center_3.24.3.orig/panels/info/logo-generator.vala	2017-09-30 17:54:58.075718188 +0800
++++ gnome-control-center_3.24.3/panels/info/logo-generator.vala	1970-01-01 08:00:00.000000000 +0800
 @@ -1,47 +0,0 @@
 -public class Main : Object
 -{
@@ -101,11 +73,10 @@ Index: gnome-control-center_3.24.3.orig/panels/info/logo-generator.vala
 -	return 0;
 -    }
 -}
-Index: gnome-control-center_3.24.3.orig/panels/info/Makefile.am
-===================================================================
---- gnome-control-center_3.24.3.orig.orig/panels/info/Makefile.am
-+++ gnome-control-center_3.24.3.orig/panels/info/Makefile.am
-@@ -59,29 +59,3 @@ CLEANFILES = $(desktop_in_files) $(deskt
+diff -Naur gnome-control-center_3.24.3.orig/panels/info/Makefile.am gnome-control-center_3.24.3/panels/info/Makefile.am
+--- gnome-control-center_3.24.3.orig/panels/info/Makefile.am	2017-09-30 17:58:11.615315733 +0800
++++ gnome-control-center_3.24.3/panels/info/Makefile.am	2017-09-30 17:37:34.625712664 +0800
+@@ -59,29 +59,3 @@
  EXTRA_DIST = $(resource_files) info.gresource.xml info-cleanup-test.txt
  
  -include $(top_srcdir)/git.mk
