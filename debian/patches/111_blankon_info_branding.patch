@@ -1,0 +1,138 @@
+diff -Naur gnome-control-center-3.24.orig/configure.ac gnome-control-center-3.24.3/configure.ac
+--- gnome-control-center-3.24.orig/configure.ac	2017-07-23 00:05:54.000000000 +0800
++++ gnome-control-center-3.24.3/configure.ac	2017-09-30 20:14:06.196863279 +0800
+@@ -175,6 +175,8 @@
+ PKG_CHECK_MODULES(GVC, gobject-2.0 libpulse libpulse-mainloop-glib)
+ AM_CONDITIONAL(HAVE_INTROSPECTION, false)
+ 
++AM_PROG_VALAC([0.20.0])
++
+ GDESKTOP_PREFIX=`$PKG_CONFIG --variable prefix gsettings-desktop-schemas`
+ AC_SUBST(GDESKTOP_PREFIX)
+ 
+diff -Naur gnome-control-center-3.24.orig/panels/background/bg-wallpapers-source.c gnome-control-center-3.24.3/panels/background/bg-wallpapers-source.c
+--- gnome-control-center-3.24.orig/panels/background/bg-wallpapers-source.c	2015-03-27 22:06:50.000000000 +0800
++++ gnome-control-center-3.24.3/panels/background/bg-wallpapers-source.c	2017-09-30 20:29:39.770835055 +0800
+@@ -114,7 +114,7 @@
+   for (i = 0; system_data_dirs[i]; i++) {
+     filename = g_build_filename (system_data_dirs[i],
+ 				 "gnome-background-properties",
+-				 "adwaita.xml",
++				 "blankon-wallpapers.xml",
+ 				 NULL);
+     if (cc_background_xml_load_xml (self->priv->xml, filename)) {
+       g_free (filename);
+diff -Naur gnome-control-center-3.24.orig/panels/info/cc-info-panel.c gnome-control-center-3.24.3/panels/info/cc-info-panel.c
+--- gnome-control-center-3.24.orig/panels/info/cc-info-panel.c	2017-07-22 23:19:48.000000000 +0800
++++ gnome-control-center-3.24.3/panels/info/cc-info-panel.c	2017-09-30 20:26:48.182822897 +0800
+@@ -1487,6 +1487,7 @@
+ {
+   GtkWidget  *widget;
+   gboolean    res;
++  gtk_widget_hide (WID ("version_label"));
+   glibtop_mem mem;
+   const glibtop_sysinfo *info;
+   char       *text;
+diff -Naur gnome-control-center-3.24.orig/panels/info/info.gresource.xml gnome-control-center-3.24.3/panels/info/info.gresource.xml
+--- gnome-control-center-3.24.orig/panels/info/info.gresource.xml	2017-07-22 23:19:48.000000000 +0800
++++ gnome-control-center-3.24.3/panels/info/info.gresource.xml	2017-09-30 20:28:31.042747629 +0800
+@@ -2,6 +2,6 @@
+ <gresources>
+   <gresource prefix="/org/gnome/control-center/info">
+     <file preprocess="xml-stripblanks">info.ui</file>
+-    <file>GnomeLogoVerticalMedium.svg</file>
++    <file>BlankonLogo.png</file>
+   </gresource>
+ </gresources>
+diff -Naur gnome-control-center-3.24.orig/panels/info/info.ui gnome-control-center-3.24.3/panels/info/info.ui
+--- gnome-control-center-3.24.orig/panels/info/info.ui	2017-07-22 23:19:48.000000000 +0800
++++ gnome-control-center-3.24.3/panels/info/info.ui	2017-09-30 20:27:48.954665008 +0800
+@@ -205,7 +205,7 @@
+                               <object class="GtkImage" id="system_image">
+                                 <property name="visible">True</property>
+                                 <property name="can_focus">False</property>
+-                                <property name="resource">/org/gnome/control-center/info/GnomeLogoVerticalMedium.svg</property>
++                                <property name="pixbuf">BlankonLogo.png</property>
+                               </object>
+                               <packing>
+                                 <property name="expand">False</property>
+diff -Naur gnome-control-center-3.24.orig/panels/info/logo-generator.vala gnome-control-center-3.24.3/panels/info/logo-generator.vala
+--- gnome-control-center-3.24.orig/panels/info/logo-generator.vala	1970-01-01 08:00:00.000000000 +0800
++++ gnome-control-center-3.24.3/panels/info/logo-generator.vala	2017-09-30 20:22:57.532469907 +0800
+@@ -0,0 +1,47 @@
++public class Main : Object
++{
++
++    private static string? file = null;
++    private static string? text = null;
++    private static string? result = null;
++    private const OptionEntry[] options = { 
++	{"logo", 0, 0, OptionArg.FILENAME, ref file, "Path to logo", "LOGO"},
++	{"text", 0, 0, OptionArg.STRING, ref text, "Sublogo text", "TEXT"},
++	{"output", 0, 0, OptionArg.FILENAME, ref result, "Path to rendered output", "OUTPUT"},
++	{null}
++    };
++
++    public static int main(string[] args) {
++	try {
++	    var opt_context = new OptionContext ("- OptionContext example");
++	    opt_context.set_help_enabled (true);
++	    opt_context.add_main_entries (options, null);
++	    opt_context.parse (ref args);
++	} catch (OptionError e) {    
++	    stdout.printf ("error: %s\n", e.message);
++	    stdout.printf ("Run '%s --help' to see a full list of available command line options.\n", args[0]);
++	    return 0;
++	}
++	Cairo.ImageSurface surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, 190, 145);
++	Cairo.Context context = new Cairo.Context (surface);
++	Cairo.ImageSurface logo = new Cairo.ImageSurface.from_png (file);
++	context.set_source_surface (logo, 0, 0);
++	context.paint();
++
++	context.set_source_rgba (0, 0, 0, 1);
++	context.translate (0, 117);
++	var font_description = new Pango.FontDescription();
++	font_description.set_family("Aurulent Sans");
++	font_description.set_size((int)(17.5 * Pango.SCALE));
++	var layout = Pango.cairo_create_layout (context);
++	layout.set_alignment(Pango.Alignment.CENTER);
++	layout.set_width(190*Pango.SCALE);
++	layout.set_font_description (font_description);
++	layout.set_text (text, -1);
++
++	Pango.cairo_show_layout(context, layout);
++
++	surface.write_to_png(result);
++	return 0;
++    }
++}
+diff -Naur gnome-control-center-3.24.orig/panels/info/Makefile.am gnome-control-center-3.24.3/panels/info/Makefile.am
+--- gnome-control-center-3.24.orig/panels/info/Makefile.am	2017-07-22 23:19:48.000000000 +0800
++++ gnome-control-center-3.24.3/panels/info/Makefile.am	2017-09-30 20:21:08.977284793 +0800
+@@ -11,9 +11,25 @@
+ 	-DBINDIR="\"$(bindir)\""				\
+ 	$(NULL)
+ 
++noinst_PROGRAMS = logo-generator
++logo_generator_SOURCES = logo-generator.vala
++
++logo_generator_VALAFLAGS = \
++	--pkg cairo        \
++	--pkg pango        \
++	--pkg pangocairo   \
++	--target-glib 2.32
++
++logo_generator_CFLAGS = $(PANEL_CFLAGS) $(INFO_PANEL_CFLAGS)
++logo_generator_LDADD = $(PANEL_LIBS) $(INFO_PANEL_LIBS)
++
+ noinst_LTLIBRARIES = libinfo.la
+ 
++BlankonLogo.png: logo-generator
++	./logo-generator --logo BlankonLogoBlank.png --text "BlankOn XI Uluwatu" --output BlankonLogo.png
++
+ BUILT_SOURCES =			\
++	BlankonLogo.png \
+ 	cc-info-resources.c	\
+ 	cc-info-resources.h
+ 
